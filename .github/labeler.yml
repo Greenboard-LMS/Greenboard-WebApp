@@ -1,0 +1,6 @@
+documentation: 
+  - CONTRIBUTING.md
+  - README.md
+
+unit-testing:
+  - tests/*.test.js
