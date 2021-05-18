@@ -1,7 +1,12 @@
 {
-  "name": "borumclassroom-web-1",
-  "version": "0.1.0",
-  "private": true,
+  "name": "greenboard-web",
+  "description": "The web app for Greenboard, an online education platform",
+  "version": "0.0.1",
+  "private": false,
+  "author": {
+    "name": "Varun Singh",
+    "url": "https://varunsingh.dev"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",

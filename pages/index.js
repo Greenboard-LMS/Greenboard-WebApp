@@ -6,13 +6,13 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Borum Classroom</title>
+        <title>Greenboard</title>
         <link rel="icon" href="/favicon/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://classroom.bforborum.com">Borum Classroom</a>
+          Welcome to <a href="https://classroom.borumtech.com">Greenboard</a>
         </h1>
 
         <p className={styles.description}>
@@ -22,7 +22,7 @@ export default function Home() {
         <Image width={128} height={96} src="/favicon/favicon.png" />
 
         <div className={styles.grid}>
-          <a href="https://github.com/Borumer/BorumClassroom-WebApp" className={styles.card}>
+          <a href="https://github.com/Borumer/Greenboard" className={styles.card}>
             <h3>Open Source &rarr;</h3>
             <p>Be one of the first to help with the early development stages on GitHub</p>
           </a>
