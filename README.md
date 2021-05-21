@@ -1,3 +1,3 @@
-# BorumClassroom-WebApp
+# Greenboard
 
 The web app client for the Borum Tech online education platform, Borum Classroom
