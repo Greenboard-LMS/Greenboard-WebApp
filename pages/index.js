@@ -16,13 +16,13 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          We are currently in rapid development and will be launching in June 2021!
+          We are currently in rapid development and will be launching in September 2022!
         </p>
 
         <Image width={128} height={96} src="/favicon/favicon.png" />
 
         <div className={styles.grid}>
-          <a href="https://github.com/Borumer/Greenboard" className={styles.card}>
+          <a href="https://github.com/Greenboard-LMS/Greenboard" className={styles.card}>
             <h3>Open Source &rarr;</h3>
             <p>Be one of the first to help with the early development stages on GitHub</p>
           </a>
@@ -30,7 +30,7 @@ export default function Home() {
       </main>
 
       <footer className={styles.footer}>
-        <p>All rights reserved &copy; 2021 </p>
+        <p>All rights reserved &copy; 2021 Borum Tech</p>
         <a
           href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
           target="_blank"
