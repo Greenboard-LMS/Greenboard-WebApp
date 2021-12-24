@@ -19,7 +19,8 @@ export default function Home() {
           We are currently in rapid development and will be launching in September 2022!
         </p>
 
-        <Image width={128} height={96} src="/favicon/favicon.png" />
+        {/* <Image width={128} height={96} src="/favicon/favicon.png" /> */}
+        <img width="128" height="96" src="/favicon/favicon.png" />
 
         <div className={styles.grid}>
           <a href="https://github.com/Greenboard-LMS/Greenboard-WebApp" className={styles.card}>
