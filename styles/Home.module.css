@@ -21,8 +21,15 @@
   height: 100px;
   border-top: 1px solid #eaeaea;
   display: flex;
+  /* justify-content: space-between; */
   justify-content: center;
+  flex-wrap: wrap;
+  padding: 1em;
   align-items: center;
+}
+
+.footer .socialIcons > * {
+  margin: 0.5em;
 }
 
 .footer img {
