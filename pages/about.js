@@ -1,7 +1,6 @@
 import Head from 'next/head';
+import Layout from "../components/Layout.js";
 import styles from '../styles/Home.module.css';
-import {SocialIcon } from "react-social-icons";
-import Layout from "../components/Layout";
 
 export default function Home() {
   return (
