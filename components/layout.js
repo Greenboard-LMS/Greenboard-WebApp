@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from "./Header";
 import Footer from './Footer';
 
-const Layout = (props) => {
+export default function Layout (props) {
   return (
     <div>
       <Head>
@@ -25,4 +25,3 @@ const Layout = (props) => {
     </div>
   )
 }
-export default Layout;
