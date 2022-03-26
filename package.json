@@ -1,7 +1,7 @@
 {
   "name": "greenboard-web",
   "description": "The web app for Greenboard, an online education platform",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": false,
   "author": {
     "name": "Varun Singh",
@@ -13,12 +13,11 @@
     "start": "next start"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^4.3.0",
     "bootstrap": "^4.6.0",
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "reactstrap": "^8.9.0",
-    "react-social-icons": "^5.13.0"
+    "react-social-icons": "^5.13.0",
+    "reactstrap": "^8.9.0"
   }
 }
