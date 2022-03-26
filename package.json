@@ -18,7 +18,7 @@
     "next": "10.0.7",
     "react": "17.0.1",
     "react-dom": "17.0.1",
-    "reactstrap": "^8.9.0",
-    "react-social-icons": "^5.13.0"
+    "react-social-icons": "^5.13.0",
+    "reactstrap": "^8.9.0"
   }
 }
