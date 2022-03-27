@@ -5,6 +5,10 @@
   padding-left: 50px;
 }
 
+.navbar-brand {
+  font-size: 1em;
+}
+
 .header .navbar {
   padding: 10px 0px;
   line-height: 50px;
@@ -14,7 +18,7 @@
   text-decoration: none;
 }
 
-.header .navbar a:hover {
+.header .nav-item a:hover {
   color: black;
 }
 
@@ -52,7 +56,7 @@
   line-height: 2em;
 }
 
-.navbar-nav :not(.dropdown) > a::after, .navbar-nav > .active::after {
+.nav-item > a::after, .navbar-nav > .active::after {
   content: "";
   display: block;
   width: 100%;
@@ -60,11 +64,25 @@
   background-color: #1cc3a1;
 }
 
-.navbar-nav :not(.dropdown) > a:not(.active)::after {
+.nav-item > a:not(.active)::after {
   transition: transform 0.3s ease;
   transform: scaleX(0);
 }
 
-.navbar-nav :not(.dropdown) > a:hover::after {
+.nav-item > a:hover::after {
   transform: scaleX(1);
 }
+
+.get-started {
+  padding: 0 1.5em;
+  color: white;
+  background-color: var(--color-primary);
+  transition: 0.3s;
+  border-radius: 10px;
+}
+
+.get-started:hover {
+  background-color: var(--color-darker-primary);
+  color: white;
+}
+

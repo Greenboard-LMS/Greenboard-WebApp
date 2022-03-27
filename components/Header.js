@@ -11,7 +11,8 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  UncontrolledDropdown
+  UncontrolledDropdown,
+  NavbarText
 } from 'reactstrap';
 import Image from "next/image";
 import Link from "next/link";
@@ -41,30 +42,27 @@ const Header = () => {
       return 'active';
     return '';
   }
-  
+
   return (
     <div className={`header${sticky ? ' sticky' : ''}`}>
       <Navbar light expand="md">
         <Container>
           <NavbarBrand href="/" tag={Link}>
-              <a style={{textDecoration: "none"}}>
-                <div style={{ display: "flex", alignItems: "center" }}>
-                  <Image src="/favicon/favicon.png" height={72} width={96} />
-                  <span>
-                    Greenboard
-                  </span>
-                </div>
-              </a>
+            <a className="navbar-brand" style={{ textDecoration: "none" }}>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <Image src="/favicon/favicon.png" height={72} width={96} />
+                <span>
+                  Greenboard
+                </span>
+              </div>
+            </a>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>
               <NavItem>
-                <Link href="/about"><a className={isActive('/about')}>About</a></Link>
-              </NavItem>
-              <NavItem>
                 <UncontrolledDropdown>
-                  <DropdownToggle nav caret style={{color: 'black'}}>Services</DropdownToggle>
+                  <DropdownToggle nav caret style={{ color: 'black' }}>Services</DropdownToggle>
                   <DropdownMenu>
                     <DropdownItem>
                       <Link href="/services/Greenboard"><a>Greenboard</a></Link>
@@ -88,6 +86,9 @@ const Header = () => {
                 <Link href="/get-involved"><a className={isActive('/get-involved')}>Get Involved</a></Link>
               </NavItem>
             </Nav>
+            <Link href="https://accounts.borumtech.com/login?redirect=Greenboard">
+              <a className="get-started" target="_blank" rel="noreferrer noopener">Get Started</a>
+            </Link>
           </Collapse>
         </Container>
       </Navbar>
