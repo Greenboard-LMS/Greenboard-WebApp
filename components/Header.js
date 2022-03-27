@@ -7,15 +7,22 @@ import {
   NavbarBrand,
   Nav,
   NavItem,
-  NavLink
+  NavLink,
+  DropdownToggle,
+  DropdownMenu,
+  DropdownItem,
+  UncontrolledDropdown
 } from 'reactstrap';
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from 'next/router';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [sticky, setSticky] = useState(false);
   const toggle = () => setIsOpen(!isOpen);
+
+  const router = useRouter();
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
@@ -29,12 +36,17 @@ const Header = () => {
     }
   }
 
+  const isActive = (path) => {
+    if (router.pathname.includes(path))
+      return 'active';
+    return '';
+  }
+  
   return (
     <div className={`header${sticky ? ' sticky' : ''}`}>
       <Navbar light expand="md">
         <Container>
-          <NavbarBrand>
-            <Link href="/">
+          <NavbarBrand href="/" tag={Link}>
               <a style={{textDecoration: "none"}}>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <Image src="/favicon/favicon.png" height={72} width={96} />
@@ -43,16 +55,37 @@ const Header = () => {
                   </span>
                 </div>
               </a>
-            </Link>
           </NavbarBrand>
           <NavbarToggler onClick={toggle} />
           <Collapse isOpen={isOpen} navbar>
             <Nav className="m-auto" navbar>
               <NavItem>
-                <Link href="/services"><a>Services</a></Link>
+                <Link href="/about"><a className={isActive('/about')}>About</a></Link>
               </NavItem>
               <NavItem>
-                <Link href="/about"><a>About</a></Link>
+                <UncontrolledDropdown>
+                  <DropdownToggle nav caret style={{color: 'black'}}>Services</DropdownToggle>
+                  <DropdownMenu>
+                    <DropdownItem>
+                      <Link href="/services/Greenboard"><a>Greenboard</a></Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link href="/services/Greenboard-Tally"><a>Greenboard Tally</a></Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link href="/services/Greenboard-Assess"><a>Greenboard Assess</a></Link>
+                    </DropdownItem>
+                    <DropdownItem>
+                      <Link href="/services/Greenboard-Flash"><a>Greenboard Flash</a></Link>
+                    </DropdownItem>
+                  </DropdownMenu>
+                </UncontrolledDropdown>
+              </NavItem>
+              <NavItem>
+                <Link href="/pricing"><a className={isActive('/pricing')}>Pricing</a></Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/get-involved"><a className={isActive('/get-involved')}>Get Involved</a></Link>
               </NavItem>
             </Nav>
           </Collapse>

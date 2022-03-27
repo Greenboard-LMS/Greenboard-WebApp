@@ -1,20 +1,10 @@
-import Head from 'next/head';
+import Image from 'next/image';
 import Layout from "../components/Layout.js";
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
   return (
-    <Layout>
-      <Head>
-        <title>Greenboard</title>
-        <link rel="icon" href="/favicon/favicon.ico" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:site" content="@GreenboardLMS" />
-        <meta name="twitter:title" content="Greenboard | The future of education" />
-        <meta name="twitter:description" content="Greenboard is Borum's innovative new learning management system offering assignments, assessments, math editing, collaboration, communication, grading, and any extensions you'd like in an all-in-one workspace for schools" />
-        <meta name="twitter:image" content="https://classroom.borumtech.com/favicon/favicon.png" />
-      </Head>
-
+    <Layout title="Greenboard">
       <main className={styles.main}>
         <h1 className={styles.title}>
           Welcome to <a href="https://classroom.borumtech.com">Greenboard</a>
@@ -24,8 +14,7 @@ export default function Home() {
           We are currently in rapid development and will be launching in September 2022!
         </p>
 
-        {/* <Image width={128} height={96} src="/favicon/favicon.png" /> */}
-        <img width="128" height="96" src="/favicon/favicon.png" />
+        <Image height={72} width={96} src="/favicon/favicon.png" />
 
         <div className={styles.grid}>
           <a target="_blank" rel="noreferrer noopener" href="https://github.com/Greenboard-LMS/Greenboard-WebApp" className={styles.card}>
