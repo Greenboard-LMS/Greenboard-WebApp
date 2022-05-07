@@ -1,0 +1,18 @@
+.team div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.team div figure {
+    margin: 1em 50px 1em 0;
+}
+
+.team figure img {
+    border-radius: 5px;
+}
+
+.team figure figcaption p:first-of-type {
+    color: var(--color-primary);
+    font-weight: bold;
+    /* font-size: 1.5em; */
+}

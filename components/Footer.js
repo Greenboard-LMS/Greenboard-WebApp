@@ -63,7 +63,7 @@ const Footer = () => {
 
               <Col md={4}>
                 <h6 className="text-dark mb-3">Our Address</h6>
-                <p className="text-muted f-14">1224 John R. Junkin Drive, Natchez, MS 39120</p>
+                <p className="text-muted f-14">279 John R. Junkin Drive, Natchez, MS 39120</p>
                 <h6 className="text-muted pb-2">greenboard@borumtech.com</h6>
                 <ul className="list-unstyled footer-social-list mt-4">
                   <li className="list-inline-item"><a href="#"><i className="mdi mdi-facebook"></i></a></li>
@@ -78,7 +78,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col md={12}>
             <div className="text-center text-muted">
-              <p className="mb-0 f-15">2021-{new Date().getFullYear()} © Varun Singh. Design by Easywebsify</p>
+              <p className="mb-0 f-15">2021-{new Date().getFullYear()} © Borum Tech</p>
             </div>
           </Col>
         </Row>

@@ -8,7 +8,7 @@
     "url": "https://varunsingh.dev"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3200",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

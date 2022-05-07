@@ -1,22 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import {
-  Container,
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  UncontrolledDropdown,
-  NavbarText
-} from 'reactstrap';
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from 'next/router';
+import React, { useEffect, useState } from 'react';
+import {
+  Collapse, Container, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, UncontrolledDropdown
+} from 'reactstrap';
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -25,17 +13,6 @@ const Header = () => {
 
   const router = useRouter();
 
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-  });
-
-  const handleScroll = () => {
-    if (window.scrollY > 90) {
-      setSticky(true);
-    } else if (window.scrollY < 90) {
-      setSticky(false);
-    }
-  }
 
   const isActive = (path) => {
     if (router.pathname.includes(path))
@@ -84,6 +61,9 @@ const Header = () => {
               </NavItem>
               <NavItem>
                 <Link href="/get-involved"><a className={isActive('/get-involved')}>Get Involved</a></Link>
+              </NavItem>
+              <NavItem>
+                <Link href="/about"><a className={isActive('/about')}>About Us</a></Link>
               </NavItem>
             </Nav>
             <Link href="https://accounts.borumtech.com/login?redirect=Greenboard">

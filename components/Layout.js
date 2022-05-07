@@ -23,9 +23,9 @@ export default function Layout (props) {
         <meta name="twitter:image" content="https://classroom.borumtech.com/favicon/favicon.png" />
       </Head>
       <Header />
-      <div>
+      <main className="container">
         {props.children}
-      </div>
+      </main>
       <Footer />
     </div>
   )

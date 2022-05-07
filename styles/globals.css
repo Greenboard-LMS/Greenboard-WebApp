@@ -28,3 +28,7 @@ a:hover {
   padding-bottom: 100px;
   position: relative;
 }
+
+main h1 {
+  text-align: center;
+}
