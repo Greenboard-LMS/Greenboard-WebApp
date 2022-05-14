@@ -3,8 +3,9 @@ import Link from "next/link";
 import { useRouter } from 'next/router';
 import React, { useEffect, useState } from 'react';
 import {
-  Collapse, Container, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, UncontrolledDropdown
+  Collapse, Container, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Nav, Navbar, NavbarBrand, NavbarToggler, NavItem, UncontrolledDropdown
 } from 'reactstrap';
+import { products } from "../libs/meta";
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,18 +42,11 @@ const Header = () => {
                 <UncontrolledDropdown>
                   <DropdownToggle nav caret style={{ color: 'black' }}>Services</DropdownToggle>
                   <DropdownMenu>
-                    <DropdownItem>
-                      <Link href="/services/Greenboard"><a>Greenboard</a></Link>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Link href="/services/Greenboard-Tally"><a>Greenboard Tally</a></Link>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Link href="/services/Greenboard-Assess"><a>Greenboard Assess</a></Link>
-                    </DropdownItem>
-                    <DropdownItem>
-                      <Link href="/services/Greenboard-Flash"><a>Greenboard Flash</a></Link>
-                    </DropdownItem>
+                    {products.map(item => (
+                      <DropdownItem>
+                        <Link href={`/services/${item.toLowerCase().split(" ").join("-")}`}><a>{item}</a></Link>
+                      </DropdownItem>
+                    ))}
                   </DropdownMenu>
                 </UncontrolledDropdown>
               </NavItem>

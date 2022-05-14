@@ -2,6 +2,7 @@ import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { Container, Row, Col } from "reactstrap";
 import footer from "./footer.module.css";
+import Link from "next/link";
 
 const Footer = () => {
   const links = [
@@ -11,7 +12,9 @@ const Footer = () => {
         { title: "Greenboard", link: "/services/greenboard" },
         { title: "Greenboard Tally", link: "/services/greenboard-tally" },
         { title: "Greenboard Assess", link: "/services/greenboard-assess" },
-        { title: "Greenboard Study", link: "/services/greenboard-study" }
+        { title: "Greenboard Flash", link: "/services/greenboard-flash" },
+        { title: "Greenboard Market", link: "/services/greenboard-market" },
+        { title: "GoGreen", link: "/services/gogreen" }
       ]
     },
     {
@@ -53,7 +56,7 @@ const Footer = () => {
                     <ul className="list-unstyled company-sub-menu">
                       {
                         link.child.map((fLink, key) =>
-                          <li key={key}><a href={fLink.link}>{fLink.title}</a></li>
+                          <li key={key}><Link href={fLink.link}><a>{fLink.title}</a></Link></li>
                         )
                       }
                     </ul>
