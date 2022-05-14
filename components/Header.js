@@ -44,7 +44,7 @@ const Header = () => {
                   <DropdownMenu>
                     {products.map(item => (
                       <DropdownItem>
-                        <Link href={`/services/${item.toLowerCase().split(" ").join("-")}`}><a>{item}</a></Link>
+                        <Link key={item.slice(-5)} href={`/services/${item.toLowerCase().split(" ").join("-")}`}><a>{item}</a></Link>
                       </DropdownItem>
                     ))}
                   </DropdownMenu>
