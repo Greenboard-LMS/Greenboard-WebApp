@@ -14,6 +14,8 @@ const Footer = () => {
         { title: "Greenboard Assess", link: "/services/greenboard-assess" },
         { title: "Greenboard Flash", link: "/services/greenboard-flash" },
         { title: "Greenboard Market", link: "/services/greenboard-market" },
+        { title: "Greenboard Audio", link: "/services/greenboard-audio" },
+        { title: "Greenboard Forums", link: "/services/greenboard-forums" },
         { title: "GoGreen", link: "/services/gogreen" }
       ]
     },

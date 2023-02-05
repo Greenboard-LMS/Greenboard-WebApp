@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Header from "./Header";
 import Footer from './Footer';
 
-export default function Layout (props) {
+export default function Layout(props) {
   return (
     <div>
       <Head>
@@ -19,7 +19,7 @@ export default function Layout (props) {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@GreenboardLMS" />
         <meta name="twitter:title" content="Greenboard | The future of education" />
-        <meta name="twitter:description" content="Greenboard is Borum's innovative new learning management system offering assignments, assessments, math editing, collaboration, communication, grading, and any extensions you'd like in an all-in-one workspace for schools" />
+        <meta name="twitter:description" content="Greenboard is an innovative new learning management system offering assignments, assessments, math editing, collaboration, communication, grading, and any extensions you'd like in an all-in-one workspace for schools" />
         <meta name="twitter:image" content="https://classroom.borumtech.com/favicon/favicon.png" />
       </Head>
       <Header />

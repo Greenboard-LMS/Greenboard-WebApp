@@ -9,17 +9,10 @@ export default function Team(props) {
                 <h1>Our Team</h1>
                 <div>
                     <figure>
-                        <Image src="/images/team/developer.png" alt="Developer" width={100} height={100} />
+                        <Image src="/images/team/varun_singh.png" alt="Creator" width={100} height={100} />
                         <figcaption>
                             <p>Varun Singh</p>
-                            <p>Software Developer</p>
-                        </figcaption>
-                    </figure>
-                    <figure>
-                        <Image src="/images/team/marketing.jpg" alt="Marketing" width={100} height={100} />
-                        <figcaption>
-                            <p>Jason Nagel</p>
-                            <p>Marketing</p>
+                            <p>Creator</p>
                         </figcaption>
                     </figure>
                 </div>

@@ -43,8 +43,8 @@ const Header = () => {
                   <DropdownToggle nav caret style={{ color: 'black' }}>Services</DropdownToggle>
                   <DropdownMenu>
                     {products.map(item => (
-                      <DropdownItem>
-                        <Link key={item.slice(-5)} href={`/services/${item.toLowerCase().split(" ").join("-")}`}><a>{item}</a></Link>
+                      <DropdownItem key={item.slice(-5)}>
+                        <Link href={`/services/${item.toLowerCase().split(" ").join("-")}`}><a>{item}</a></Link>
                       </DropdownItem>
                     ))}
                   </DropdownMenu>
