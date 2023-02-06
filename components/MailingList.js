@@ -1,6 +1,9 @@
 import Script from "next/script"
+import { useRef } from "react"
 
 export default function MailingList(props) {
+    const img = useRef();
+
     return (
         <div>
             {/*Zoho Campaigns Web-Optin Form's Header Code Starts Here*/}
@@ -82,7 +85,7 @@ export default function MailingList(props) {
                         </div>
                     </div>
                 </div>
-                <img src="https://zcvf-zcglf.maillist-manage.com/images/spacer.gif" id="refImage" onLoad={() => { referenceSetter(this) }} style={{ display: 'none' }} />
+                <img src="https://zcvf-zcglf.maillist-manage.com/images/spacer.gif" ref={img} id="refImage" onLoad={() => { referenceSetter(img.current) }} style={{ display: 'none' }} />
             </div>
             <input type="hidden" id="signupFormType" defaultValue="QuickForm_Vertical" />
             <div id="zcOptinOverLay" onContextMenu={() => false} style={{ display: 'none', textAlign: 'center', backgroundColor: 'rgb(0, 0, 0)', opacity: '0.5', zIndex: 100, position: 'fixed', width: '100%', top: '0px', left: '0px', height: '988px' }} />
