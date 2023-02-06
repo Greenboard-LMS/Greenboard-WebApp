@@ -8,7 +8,7 @@ export default function MailingList(props) {
         <div>
             {/*Zoho Campaigns Web-Optin Form's Header Code Starts Here*/}
             <Script src="https://zcvf-zcglf.maillist-manage.com/js/optin.min.js" onLoad={() => {
-                setupSF('sf3z2875ecba7322a422a4fc9493664cb71e409267ad9331723e910dc21548df54c0', 'ZCFORMVIEW', false, 'light', false, '0')
+                window["setupSF"]('sf3z2875ecba7322a422a4fc9493664cb71e409267ad9331723e910dc21548df54c0', 'ZCFORMVIEW', false, 'light', false, '0')
             }} />
             <Script onLoad={() => {
                 function runOnFormSubmit_sf3z2875ecba7322a422a4fc9493664cb71e409267ad9331723e910dc21548df54c0(th) {
@@ -44,7 +44,7 @@ export default function MailingList(props) {
                                 <div style={{ textAlign: 'center', width: '100%', float: 'left', position: 'absolute', zIndex: 2, bottom: '40px' }}>
                                     <div style={{ fontSize: '18px', fontFamily: '"Arial"', fontWeight: 'normal', color: 'rgb(0, 0, 0)', lineHeight: '1.556', textAlign: 'center', margin: '0px 0 10px', width: '100%', float: 'left' }}>Help us transform education</div>
                                     <div style={{ position: 'relative', width: '190px', height: '28px', marginBottom: '20px', display: 'inline-block' }}>
-                                        <input type="text" style={{ borderWidth: '0 0 1px', borderColor: 'rgb(99, 99, 99)', borderStyle: 'solid', width: '100%', height: '100%', zIndex: 4, outline: 'none', padding: '5px 5px', boxSizing: 'border-box', color: 'rgb(51, 51, 51)', fontFamily: '"Arial"', backgroundColor: 'transparent' }} placeholder="First Name" changeitem="SIGNUP_FORM_FIELD" name="FIRSTNAME" id="FIRSTNAME" />
+                                        <input type="text" style={{ borderWidth: '0 0 1px', borderColor: 'rgb(99, 99, 99)', borderStyle: 'solid', width: '100%', height: '100%', zIndex: 4, outline: 'none', padding: '5px 5px', boxSizing: 'border-box', color: 'rgb(51, 51, 51)', fontFamily: '"Arial"', backgroundColor: 'transparent' }} placeholder="Name" changeitem="SIGNUP_FORM_FIELD" name="FIRSTNAME" id="FIRSTNAME" />
                                     </div>
                                     <div style={{ textAlign: 'center', width: '190px', height: '28px', margin: 'auto', marginBottom: '20px' }}>
                                         <div id="Zc_SignupSuccess" style={{ position: 'absolute', width: '87%', backgroundColor: 'white', padding: '3px', border: '3px solid rgb(194, 225, 154)', marginBottom: '10px', wordBreak: 'break-all', opacity: 1, display: 'none' }}>
