@@ -85,7 +85,7 @@ export default function MailingList(props) {
                         </div>
                     </div>
                 </div>
-                <img src="https://zcvf-zcglf.maillist-manage.com/images/spacer.gif" ref={img} id="refImage" onLoad={() => { referenceSetter(img.current) }} style={{ display: 'none' }} />
+                <img src="https://zcvf-zcglf.maillist-manage.com/images/spacer.gif" ref={img} id="refImage" onLoad={() => { window["referenceSetter"](img.current) }} style={{ display: 'none' }} />
             </div>
             <input type="hidden" id="signupFormType" defaultValue="QuickForm_Vertical" />
             <div id="zcOptinOverLay" onContextMenu={() => false} style={{ display: 'none', textAlign: 'center', backgroundColor: 'rgb(0, 0, 0)', opacity: '0.5', zIndex: 100, position: 'fixed', width: '100%', top: '0px', left: '0px', height: '988px' }} />
