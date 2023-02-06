@@ -38,7 +38,7 @@ const Footer = () => {
               <footer className="footer">
                 <span>Greenboard</span>
                 <div className="copyright">
-                  <p>&copy; 2021-{new Date().getFullYear()} Borum Tech. All rights reserved.</p>
+                  <p>&copy; 2021-{new Date().getFullYear()} Greenboard LMS. All rights reserved.</p>
                 </div>
                 <div className={footer.socialIcons}>
                   <SocialIcon target="_blank" rel="noreferrer noopener" url="https://twitter.com/GreenboardLMS" />
@@ -83,7 +83,7 @@ const Footer = () => {
         <Row className="mt-5">
           <Col md={12}>
             <div className="text-center text-muted">
-              <p className="mb-0 f-15">2021-{new Date().getFullYear()} © Borum Tech</p>
+              <p className="mb-0 f-15">2021-{new Date().getFullYear()} &copy; Greenboard LMS</p>
             </div>
           </Col>
         </Row>
