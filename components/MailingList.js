@@ -52,48 +52,52 @@ export default function MailingList(props) {
                                     </table>
                                 </div>
                             </div>
-                            <form method="POST" id="zcampaignOptinForm" style={{ margin: '0px', width: '100%', color: 'rgb(255, 255, 255)' }} action="https://zcvf-zcglf.maillist-manage.com/weboptin.zc" target="_zcSignup">
-                                <div style={{ textAlign: 'center', width: '100%', float: 'left', position: 'absolute', zIndex: 2, bottom: '40px' }}>
-                                    <div style={{ fontSize: '18px', fontFamily: '"Arial"', fontWeight: 'normal', color: 'rgb(0, 0, 0)', lineHeight: '1.556', textAlign: 'center', margin: '0px 0 10px', width: '100%', float: 'left' }}>Help us transform education</div>
-                                    <div style={{ position: 'relative', width: '190px', height: '28px', marginBottom: '20px', display: 'inline-block' }}>
-                                        <input type="text" style={{ borderWidth: '0px 0px 1px', borderStyle: 'solid', width: '100%', height: '100%', zIndex: 4, outline: 'none', padding: '5px', boxSizing: 'border-box', color: 'rgb(0, 0, 0)', fontFamily: '"Arial"', backgroundColor: 'transparent', borderColor: 'rgb(0, 0, 0)' }} placeholder="Name" changeitem="SIGNUP_FORM_FIELD" name="FIRSTNAME" id="FIRSTNAME" />
-                                    </div>
-                                    <div style={{ textAlign: 'center', width: '190px', height: '28px', margin: 'auto', marginBottom: '20px' }}>
-                                        <div id="Zc_SignupSuccess" style={{ position: 'absolute', width: '87%', backgroundColor: 'white', padding: '3px', border: '3px solid rgb(194, 225, 154)', marginBottom: '10px', wordBreak: 'break-all', opacity: 1, display: 'none' }}>
-                                            <div style={{ width: '20px', padding: '5px', display: 'table-cell' }}>
-                                                <img className="successicon" src="https://campaigns.zoho.com/images/challangeiconenable.jpg" style={{ width: '20px' }} />
-                                            </div>
-                                            <div style={{ display: 'table-cell' }}>
-                                                <span id="signupSuccessMsg" style={{ color: 'rgb(73, 140, 132)', fontFamily: 'sans-serif', fontSize: '14px', lineHeight: '30px', display: 'block' }} />
-                                            </div>
-                                        </div>
-                                        <input placeholder="Email Address" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL" type="text" style={{ borderWidth: '0px 0px 1px', borderColor: 'rgb(99, 99, 99)', borderStyle: 'solid', width: '100%', height: '100%', zIndex: 4, outline: 'none', padding: '5px', boxSizing: 'border-box', color: 'rgb(0, 0, 0)', fontFamily: '"Arial"', backgroundColor: 'transparent' }} />
-                                    </div>
-                                    <div style={{ position: 'relative', width: '113px', height: '30px', display: 'inline-block' }}>
-                                        <input type="button" style={{ textAlign: 'center', borderRadius: '6px', backgroundColor: 'rgb(28, 195, 161)', width: '100%', height: '100%', zIndex: 5, border: '0px none', color: 'rgb(255, 255, 255)', cursor: 'pointer', outline: 'none', fontFamily: '"Arial"', fontSize: '14px' }} name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" defaultValue="Sign Up" />
-                                    </div>
-                                </div>
-                                <input type="hidden" id="fieldBorder" defaultValue />
-                                <input type="hidden" id="submitType" name="submitType" defaultValue="optinCustomView" />
-                                <input type="hidden" id="emailReportId" name="emailReportId" defaultValue />
-                                <input type="hidden" id="formType" name="formType" defaultValue="QuickForm" />
-                                <input type="hidden" name="zx" id="cmpZuid" defaultValue="12dc55e5a" />
-                                <input type="hidden" name="zcvers" defaultValue={3.0} />
-                                <input type="hidden" name="oldListIds" id="allCheckedListIds" defaultValue />
-                                <input type="hidden" id="mode" name="mode" defaultValue="OptinCreateView" />
-                                <input type="hidden" id="zcld" name="zcld" defaultValue />
-                                <input type="hidden" id="zctd" name="zctd" defaultValue />
-                                <input type="hidden" id="document_domain" defaultValue />
-                                <input type="hidden" id="zc_Url" defaultValue="zcvf-zcglf.maillist-manage.com" />
-                                <input type="hidden" id="new_optin_response_in" defaultValue={0} />
-                                <input type="hidden" id="duplicate_optin_response_in" defaultValue={0} />
-                                <input type="hidden" name="zc_trackCode" id="zc_trackCode" defaultValue="ZCFORMVIEW" />
-                                <input type="hidden" id="zc_formIx" name="zc_formIx" defaultValue="3z2875ecba7322a422a4fc9493664cb71e409267ad9331723e910dc21548df54c0" />
-                                <input type="hidden" id="viewFrom" defaultValue="URL_ACTION" />
-                                <span style={{ display: 'none' }} id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
-                                <span style={{ display: 'none' }} id="dt_FIRSTNAME">1,false,1,First Name,2</span>
-                                <span style={{ display: 'none' }} id="dt_LASTNAME">1,false,1,Last Name,2</span>
-                            </form>
+                            <div dangerouslySetInnerHTML={{
+                                __html: `<form method="POST" id="zcampaignOptinForm" style="margin: 0px; width: 100%; color: rgb(255, 255, 255)" action="https://zcvf-zcglf.maillist-manage.com/weboptin.zc" target="_zcSignup">
+					<div style="text-align: center; width: 100%; float: left; position: absolute; z-index: 2; bottom: 40px">
+						<div style="font-size: 18px; font-family: &quot;Arial&quot;; font-weight: normal; color: rgb(0, 0, 0); line-height: 1.556; text-align: center; margin: 0px 0 10px; width: 100%; float: left">Help us transform education</div>
+						<div style="position: relative; width: 190px; height: 28px; margin-bottom: 20px; display: inline-block">
+							<input type="text" style="border-width: 0px 0px 1px; border-style: solid; width: 100%; height: 100%; z-index: 4; outline: none; padding: 5px; box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; background-color: transparent; border-color: rgb(0, 0, 0)" placeholder="Name" changeitem="SIGNUP_FORM_FIELD" name="FIRSTNAME" id="FIRSTNAME">
+						</div>
+						<div style="text-align: center; width: 190px; height: 28px; margin: auto; margin-bottom: 20px">
+							<div id="Zc_SignupSuccess" style="position: absolute; width: 87%; background-color: white; padding: 3px; border: 3px solid rgb(194, 225, 154); margin-bottom: 10px; word-break: break-all; opacity: 1; display: none">
+								<div style="width: 20px; padding: 5px; display: table-cell">
+									<img class="successicon" src="https://campaigns.zoho.com/images/challangeiconenable.jpg" style="width: 20px">
+								</div>
+								<div style="display: table-cell">
+									<span id="signupSuccessMsg" style="color: rgb(73, 140, 132); font-family: sans-serif; font-size: 14px; line-height: 30px; display: block"></span>
+								</div>
+							</div>
+							<input placeholder="Email Address" changeitem="SIGNUP_FORM_FIELD" name="CONTACT_EMAIL" id="EMBED_FORM_EMAIL_LABEL" type="text" style="border-width: 0px 0px 1px; border-color: rgb(99, 99, 99); border-style: solid; width: 100%; height: 100%; z-index: 4; outline: none; padding: 5px; box-sizing: border-box; color: rgb(0, 0, 0); font-family: &quot;Arial&quot;; background-color: transparent">
+						</div>
+						<div style="position: relative; width: 113px; height: 30px; display: inline-block">
+							<input type="button" style="text-align: center; border-radius: 6px; background-color: rgb(28, 195, 161); width: 100%; height: 100%; z-index: 5; border: 0px none; color: rgb(255, 255, 255); cursor: pointer; outline: none; font-family: &quot;Arial&quot;; font-size: 14px" name="SIGNUP_SUBMIT_BUTTON" id="zcWebOptin" value="Sign Up">
+						</div>
+					</div>
+					<input type="hidden" id="fieldBorder" value="">
+					<input type="hidden" id="submitType" name="submitType" value="optinCustomView">
+					<input type="hidden" id="emailReportId" name="emailReportId" value="">
+					<input type="hidden" id="formType" name="formType" value="QuickForm">
+					<input type="hidden" name="zx" id="cmpZuid" value="12dc55e5a">
+					<input type="hidden" name="zcvers" value="3.0">
+					<input type="hidden" name="oldListIds" id="allCheckedListIds" value="">
+					<input type="hidden" id="mode" name="mode" value="OptinCreateView">
+					<input type="hidden" id="zcld" name="zcld" value="">
+					<input type="hidden" id="zctd" name="zctd" value="">
+					<input type="hidden" id="document_domain" value="">
+					<input type="hidden" id="zc_Url" value="zcvf-zcglf.maillist-manage.com">
+					<input type="hidden" id="new_optin_response_in" value="0">
+					<input type="hidden" id="duplicate_optin_response_in" value="0">
+					<input type="hidden" name="zc_trackCode" id="zc_trackCode" value="ZCFORMVIEW">
+					<input type="hidden" id="zc_formIx" name="zc_formIx" value="3z2875ecba7322a422a4fc9493664cb71e409267ad9331723e910dc21548df54c0">
+					<input type="hidden" id="viewFrom" value="URL_ACTION">
+					<span style="display: none" id="dt_CONTACT_EMAIL">1,true,6,Contact Email,2</span>
+					<span style="display: none" id="dt_FIRSTNAME">1,false,1,First Name,2</span>
+					<span style="display: none" id="dt_LASTNAME">1,false,1,Last Name,2</span>
+				</form>`
+                            }
+                            } />
+
                         </div>
                     </div>
                 </div>
